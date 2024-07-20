@@ -1,0 +1,19 @@
+version: '3.8'
+
+services:
+  postgres:
+    image: postgres:14
+    container_name: aoa-postgres
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_USER: baonguyen
+      POSTGRES_PASSWORD: 123
+      POSTGRES_DB: application_with_o_auth
+      PGDATA: /data/postgres
+    volumes:
+      - postgres:/data/postgres
+    restart: unless-stopped
+
+volumes:
+  postgres:

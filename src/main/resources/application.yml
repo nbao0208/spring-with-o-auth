@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: application-with-o-auth
+
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    username: baonguyen
+    password: 123
+    url: jdbc:postgresql://localhost:5432/application_with_o_auth
+
+  flyway:
+    enabled: true
+
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    show-sql: true
+
